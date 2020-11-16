@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Document class",
+      "setup": "",
+      "run": "ruby 22document/document_test.rb",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Writer",
+      "setup": "",
+      "run": "ruby 23writer/writer_test.rb",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
