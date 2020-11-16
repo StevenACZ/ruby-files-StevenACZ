@@ -5,7 +5,7 @@ option, filename = ARGV
 case option
 when "write"
   puts "Enter a multi line response ending with a tab"
-  input = STDIN.gets(":exit").chomp(":exit")
+  input = $stdin.gets(":exit").chomp(":exit")
   file_title = input.split("\n").last
   File.write(filename, input, mode: "w")
   File.rename(filename, "#{file_title}.txt")
@@ -13,7 +13,7 @@ when "read"
   puts File.read(filename)
 when "add"
   puts "Enter a multi line response ending with a tab"
-  input = STDIN.gets(":exit").chomp(":exit")
+  input = $stdin.gets(":exit").chomp(":exit")
   file_title = input.split("\n").last
   File.write(filename, input, mode: "a")
   File.rename(filename, "#{file_title}.txt")
