@@ -7,7 +7,8 @@ class WriterTest < Minitest::Test
   include IoTestHelpers
 
   def test_write_file
-    # skip
+    skip
+    ARGV.clear
     input = ["Line 1", "Line 2", "Line 3", ":exit"]
     _output, _error = capture_io do
       simulate_stdin(*input) do
@@ -21,6 +22,7 @@ class WriterTest < Minitest::Test
 
   def test_read_file
     skip
+    ARGV.clear
     text = "Test1\nTest2\nTest3\n"
     File.open("test.txt", "w") { |file| file.write text }
     output, _error = capture_io do
@@ -33,6 +35,7 @@ class WriterTest < Minitest::Test
 
   def test_add_new_line_to_file
     skip
+    ARGV.clear
     text = "Test1\nTest2\nTest3\n"
     File.open("test.txt", "w") { |file| file.write text }
     new_line = ["Test4", ":exit"]
@@ -48,6 +51,7 @@ class WriterTest < Minitest::Test
 
   def test_ask_for_size
     skip
+    ARGV.clear
     text = "Test1\nTest2\nTest3\n"
     File.open("test.txt", "w") { |file| file.write text }
     output, _error = capture_io do
@@ -60,6 +64,7 @@ class WriterTest < Minitest::Test
 
   def test_ask_for_lines
     skip
+    ARGV.clear
     text = "Test1\nTest2\nTest3\n"
     File.open("test.txt", "w") { |file| file.write text }
     output, _error = capture_io do
@@ -72,6 +77,7 @@ class WriterTest < Minitest::Test
 
   def test_ask_for_words
     skip
+    ARGV.clear
     text = "Test1\nTest2\nTest3\n"
     File.open("test.txt", "w") { |file| file.write text }
     output, _error = capture_io do
